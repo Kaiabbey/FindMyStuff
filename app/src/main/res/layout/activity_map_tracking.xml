@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:gravity="top|center"
-    android:background="@drawable/map">
+    android:background="@drawable/map_tracking">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#D7FAFF"
+            android:background="@drawable/search_shape"
             android:visibility="visible"
             tools:visibility="visible" />
 
@@ -54,7 +54,7 @@
         android:layout_height="400dp"
         android:background="@drawable/shape"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        app:behavior_peekHeight="55dp">
+        app:behavior_peekHeight="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,17 +93,17 @@
                     android:textStyle="bold"
                     android:textColor="#979797"/>
                 <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Computer"
-                android:layout_marginLeft="15dp"
-                android:textStyle="italic"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computer"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="italic"/>
             </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_separate_24"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="10dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
