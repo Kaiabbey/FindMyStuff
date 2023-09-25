@@ -93,10 +93,12 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="Test Connection">
+            android:text="Test Connection"
+            android:id="@+id/TestConnectionButton">
 
         </Button>
         <Button
+            android:id="@+id/CreateDeviceButton"
             android:layout_marginTop="75dp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
@@ -104,6 +106,7 @@
 
         </Button>
             <Button
+                android:id="@+id/BackButton"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
