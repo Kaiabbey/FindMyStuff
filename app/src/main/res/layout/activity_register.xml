@@ -82,12 +82,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="50dp"
+            android:backgroundTint="#1A8FDD"
             android:text="Back" />
         <Button
             android:id="@+id/CreateAccountButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:backgroundTint="#1A8FDD"
             android:text="Register Account" />
     </LinearLayout>
 

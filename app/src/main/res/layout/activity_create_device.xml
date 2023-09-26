@@ -94,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="Test Connection"
+            android:backgroundTint="#1A8FDD"
             android:id="@+id/TestConnectionButton">
 
         </Button>
@@ -102,6 +103,7 @@
             android:layout_marginTop="75dp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:backgroundTint="#1A8FDD"
             android:text="Add Device">
 
         </Button>
@@ -109,6 +111,7 @@
                 android:id="@+id/BackButton"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
+                android:backgroundTint="#1A8FDD"
                 android:layout_height="50dp"
                 android:text="Back">
             </Button>
