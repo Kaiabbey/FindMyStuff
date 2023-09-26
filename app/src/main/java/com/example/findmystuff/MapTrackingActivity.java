@@ -15,6 +15,7 @@ public class MapTrackingActivity extends AppCompatActivity {
     private View bottomSheet;
     private ImageView callMessage;
     private TextView callText;
+    private imageView return_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,17 @@ public class MapTrackingActivity extends AppCompatActivity {
             Intent intent = new Intent(MapTrackingActivity.this, MessagingActivity.class);
             startActivity(intent);
         });
+
+        return_button.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MapActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void setViewsIds() {
         bottomSheet = findViewById(R.id.bottom_sheet_tracking);
         callMessage = findViewById(R.id.call_message);
         callText = findViewById(R.id.call_text);
+        return_button = findViewById(R.id.returnButton);
     }
 }
