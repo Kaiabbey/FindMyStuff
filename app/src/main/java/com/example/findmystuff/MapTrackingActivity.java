@@ -5,18 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 public class MapTrackingActivity extends AppCompatActivity {
     private BottomSheetBehavior bottomSheetBehavior;
-    private View bottomSheet;
-    private ImageView callMessage;
-    private TextView callText;
-    private ImageButton return_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

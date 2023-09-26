@@ -43,7 +43,9 @@
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/search_shape" />
+            android:background="#D7FAFF"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
     </LinearLayout>
 
