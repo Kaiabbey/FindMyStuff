@@ -58,27 +58,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_marginTop="120dp"
         android:background="#E7E4E4"
-        android:layout_marginTop="120dp">
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/baseline_person_24"
-            android:layout_marginTop="35dp"/>
+            android:layout_marginTop="35dp"
+            android:src="@drawable/baseline_person_24" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello, this is the XXX automated chat. How can we help you?"
-            android:background="@drawable/text_shape"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="45dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:background="@drawable/text_shape"
             android:padding="15dp"
-            android:textColor="#000000"/>
+            android:text="Hello, this is the XXX automated chat. How can we help you?"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -89,6 +89,7 @@
         android:layout_marginTop="650dp">
 
         <ImageView
+            android:id="@+id/emoji_button"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:src="@drawable/baseline_emoji_emotions_24"
@@ -99,9 +100,10 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Write a message..."
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:hint="Write a message..."
+            android:background="@android:drawable/editbox_background"/>
 
         <ImageView
             android:layout_width="35dp"
