@@ -28,9 +28,8 @@ public class DeviceListActivity extends AppCompatActivity {
 
         ViewDeviceButton.setOnClickListener(view -> {
             //Change to chaz's monitoring Activity
-            Toast.makeText(DeviceListActivity.this, "No Function!",Toast.LENGTH_SHORT).show();
-            //Intent intent = new Intent(this, LoginActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(this, Device_Info.class);
+            startActivity(intent);
         });
 
         NavigatetoCreateDeviceButton.setOnClickListener(view -> {

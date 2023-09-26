@@ -22,7 +22,7 @@ private Button returnButton;
             startActivity(intent);
         });
         mapButton.setOnClickListener(view -> {
-            Intent intent=new Intent(this,Battery_Info.class);
+            Intent intent=new Intent(this,MapActivity.class);
             startActivity(intent);
         });
         tasksButton.setOnClickListener(view -> {
@@ -30,7 +30,7 @@ private Button returnButton;
             startActivity(intent);
         });
         returnButton.setOnClickListener(view -> {
-            Intent intent=new Intent(this,Battery_Info.class);
+            Intent intent=new Intent(this,DeviceListActivity.class);
             startActivity(intent);
         });
     }
