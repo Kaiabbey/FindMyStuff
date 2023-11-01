@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
+import android.widget.TextView;
+
+import java.util.concurrent.CompletableFuture;
 
 public class CreateDeviceActivity extends AppCompatActivity {
     private Button backButton;
@@ -14,6 +17,8 @@ public class CreateDeviceActivity extends AppCompatActivity {
     private Button testConnectionButton;
     private RadioButton dongleRadio;
     private RadioButton computerRadio;
+    private TextView deviceName;
+    private TextView bluetoothID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +34,10 @@ public class CreateDeviceActivity extends AppCompatActivity {
         });
 
         createDeviceButton.setOnClickListener(view -> {
+
+
             Intent intent = new Intent(this, DeviceListActivity.class);
-            Toast.makeText(CreateDeviceActivity.this, "Device Created!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(CreateDeviceActivity.this, deviceName.getText()+ " Created!" ,Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 
@@ -49,5 +56,7 @@ public class CreateDeviceActivity extends AppCompatActivity {
         testConnectionButton = findViewById(R.id.TestConnectionButton);
         computerRadio = findViewById(R.id.radio_computer);
         dongleRadio = findViewById(R.id.radio_dongle);
+        deviceName = findViewById(R.id.deviceNameText);
+        bluetoothID = findViewById(R.id.bluetoothIDText);
     }
 }

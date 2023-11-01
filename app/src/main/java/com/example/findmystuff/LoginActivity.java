@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.widget.Button;
 import android.os.Bundle;
+import com.example.findmystuff.DBConnection;
+
+import java.util.concurrent.CompletableFuture;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -13,9 +16,9 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         setViewIds();
 
         loginButton.setOnClickListener(view -> {
