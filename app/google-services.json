@@ -1,0 +1,48 @@
+{
+    "project_info": {
+      "project_number": "512696073139",
+      "project_id": "corded-velocity-403002",
+      "storage_bucket": "corded-velocity-403002.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:512696073139:android:fd77aba86b80b23cba69c6",
+          "android_client_info": {
+            "package_name": "com.example.chatapp"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyBT5E8qa-VmbHqdfZbkc3sJMQc2iShH03I"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      },
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:512696073139:android:25e46d954a40d38fba69c6",
+          "android_client_info": {
+            "package_name": "com.example.findmystuff"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyBT5E8qa-VmbHqdfZbkc3sJMQc2iShH03I"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

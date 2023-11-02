@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    tools:context=".CreateDeviceActivity"
+    android:background="#D3D3D3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#54C1FF"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find My Stuff"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register New\n Device"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:textSize="20dp"
+            android:hint="Device Name"
+            android:layout_marginLeft="30dp"
+            >
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Type"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:layout_marginLeft="30dp"
+            />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+            <RadioButton android:id="@+id/radio_computer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer"
+                android:textSize="20dp"
+                android:onClick="onRadioButtonClicked"
+                android:layout_weight="40"/>
+            <RadioButton android:id="@+id/radio_dongle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dongle"
+                android:textSize="20dp"
+                android:onClick="onRadioButtonClicked"
+                android:layout_weight="40"/>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:textSize="20dp"
+            android:hint="Device ID"
+            >
+        </EditText>
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Test Connection"
+            android:backgroundTint="#1A8FDD"
+            android:id="@+id/TestConnectionButton">
+
+        </Button>
+        <Button
+            android:id="@+id/CreateDeviceButton"
+            android:layout_marginTop="75dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="#1A8FDD"
+            android:text="Add Device">
+
+        </Button>
+            <Button
+                android:id="@+id/BackButton"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:backgroundTint="#1A8FDD"
+                android:layout_height="50dp"
+                android:text="Back">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
