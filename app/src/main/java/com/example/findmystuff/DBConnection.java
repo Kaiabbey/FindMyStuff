@@ -20,15 +20,27 @@ public class DBConnection {
     }
 
     private Map<String, String> resMapper(String res){
-        String[] resArray = res.substring(12).replaceAll("[{\"}]","").split(",");
+        String[] resArray = res.substring(12).replaceAll("[{\"}]","").replaceAll("]","").split(",");
         Map<String,String> map = new HashMap<>();
         for (int i = 0; i < resArray.length; i++) {
             String[] A = resArray[i].split("[:]");
             //test log to verify object contents
-            System.out.print(A[0] +": "+ A[1]+ "\n");
+            //System.out.print(A[0] +": "+ A[1]+ "\n");
             map.put(A[0],A[1]);
         }
         return  map;
+    }
+
+    private String[] resArrayer(String res){
+        String[] resArray = res.substring(15).replaceAll("[{\"}]","").replaceAll("]","").split(",");
+        for (int i = 0; i < resArray.length; i++) {
+            String[] A = resArray[i].split("[:]");
+            //test log to verify object contents
+
+            resArray[i] = A[1];
+        }
+
+        return resArray;
     }
 
 
@@ -53,7 +65,7 @@ public class DBConnection {
                             "\n    \"collection\":\"" + collection + "\"," +  // selects collection
                             // this line is what the query parameters are built in BOTH the KEYS and VALUES need to be surrounded in \"
                             // example  query without all the '\' :
-                            // filter : { "name.first" : "bob" , "name.last" : "builder },
+                            // filter : { "name.first" : "bob" , "name.last" : "builder" },
                             // omission of the filter will return entire collection if using find
                             query
             );
@@ -84,4 +96,46 @@ public class DBConnection {
             System.out.println("fail");
         }
     }
+
+    public String[] getDeviceIDs(String userID){
+        String collection = "DEVICEINFORMATION";
+        String query =
+                "\n \"filter\":{\"userID\": \""+userID+"\"}, \"projection\":{\"_id\": 0, \"bluetoothID\" : 1}\n\n}";
+
+        OkHttpClient client = new OkHttpClient().newBuilder().build();
+        Request request = ReqBuilder(collection, query, "find");
+
+        try {
+            Response response = client.newCall(request).execute();
+            String res = response.body().string();
+            System.out.println(res);
+            String[] idArray = resArrayer(res);
+            return idArray;
+        } catch (java.io.IOException  exception) {
+            System.out.println("fail");
+            return null;
+        }
+    }
+
+    public Map<String,String> getDevice(String deviceID){
+        String collection = "DEVICEINFORMATION";
+        String query =
+                "\n \"filter\": {\"bluetoothID\": \""+deviceID+"\" } }";
+
+        OkHttpClient client = new OkHttpClient().newBuilder().build();
+        Request request = ReqBuilder(collection, query, "findOne");
+
+        try {
+            Response response = client.newCall(request).execute();
+            String res = response.body().string();
+            System.out.println(res);
+            Map<String,String> deviceMap = resMapper(res);
+            return deviceMap;
+        } catch (java.io.IOException  exception) {
+            System.out.println("fail");
+            return null;
+        }
+    }
+
+
 }
